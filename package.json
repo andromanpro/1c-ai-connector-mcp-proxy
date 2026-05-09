@@ -1,0 +1,33 @@
+{
+  "name": "iikona-mcp-proxy",
+  "version": "0.1.0",
+  "description": "stdio MCP proxy → HTTP /iikona-mcp/rpc for connecting AI clients (Claude Desktop, Cursor, 1c-refgen) to runtime-MCP service in core ИИкона",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "iikona-mcp-proxy": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test tests/"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "license": "MIT",
+  "author": "Андриянов Роман (androman.pro)",
+  "repository": {
+    "type": "git",
+    "url": "http://nas.local:3000/androman/iikona-mcp-proxy"
+  },
+  "keywords": [
+    "mcp",
+    "1c",
+    "iikona",
+    "claude",
+    "ai-agent"
+  ]
+}
