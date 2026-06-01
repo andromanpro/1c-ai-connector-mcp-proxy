@@ -89,3 +89,7 @@ MIT — см. [LICENSE](./LICENSE).
 - [`androman/.iikona`](http://nas.local:3000/androman/.iikona) — расширение 1С с runtime-MCP сервисом
 - [`androman/iikona-tests`](http://nas.local:3000/androman/iikona-tests) — YAxUnit-тесты
 - [`1c-technical-reference-generator`](https://github.com/1c-technical-reference-generator) — основной потребитель runtime-evidence
+
+---
+
+🌐 [androman.pro](https://androman.pro) · ✈ [Telegram](https://t.me/andromanpro1c)
