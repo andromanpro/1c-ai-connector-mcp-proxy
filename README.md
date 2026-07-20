@@ -2,14 +2,15 @@
 
 stdio MCP-посредник для runtime-MCP сервиса в ядре ИИконы.
 
-Переводит MCP-протокол через stdio (как ожидают Claude Desktop, Cursor и `1c-refgen` extractor) в HTTP-вызовы к `/iikona-mcp/rpc` опубликованного в 1С HTTPService.
+Переводит MCP-протокол через stdio (как ожидают Claude Desktop, Cursor и другие MCP-клиенты) в HTTP-вызовы к `/iikona-mcp/rpc` опубликованного в 1С HTTPService.
 
 ## Установка
 
 Требуется Node.js 18+.
 
 ```bash
-cd F:/WorkAI/iikona-mcp-proxy
+git clone https://github.com/andromanpro/1c-ai-connector-mcp-proxy.git
+cd 1c-ai-connector-mcp-proxy
 npm install
 npm test
 ```
@@ -40,7 +41,7 @@ npx iikona-mcp-proxy
   "mcpServers": {
     "iikona": {
       "command": "node",
-      "args": ["F:/WorkAI/iikona-mcp-proxy/src/index.js"],
+      "args": ["<путь-к-клону>/src/index.js"],
       "env": {
         "IIKONA_MCP_URL": "http://localhost/iikona-dev/hs/iikona-mcp/rpc",
         "IIKONA_MCP_USER": "mcp-client",
@@ -71,7 +72,7 @@ CLI использует те же переменные окружения `IIKO
 ## Архитектура
 
 ```
-Claude Desktop / Cursor / 1c-refgen
+Claude Desktop / Cursor / другие MCP-клиенты
     ↕ stdio (MCP standard)
 [iikona-mcp-proxy] ← тонкий stdio↔HTTP proxy
     ↕ HTTP + Basic auth
@@ -86,9 +87,9 @@ MIT — см. [LICENSE](./LICENSE).
 
 ## Связанные проекты
 
-- [`androman/.iikona`](http://nas.local:3000/androman/.iikona) — расширение 1С с runtime-MCP сервисом
-- [`androman/iikona-tests`](http://nas.local:3000/androman/iikona-tests) — YAxUnit-тесты
-- [`1c-technical-reference-generator`](https://github.com/1c-technical-reference-generator) — основной потребитель runtime-evidence
+- [`1c-ai-connector`](https://github.com/andromanpro/1c-ai-connector) — ИИкона: расширение 1С с runtime-MCP сервисом
+- [`1c-ai-connector-tests`](https://github.com/andromanpro/1c-ai-connector-tests) — YAxUnit-тесты
+- [`1c-ai-connector-guide`](https://github.com/andromanpro/1c-ai-connector-guide) — руководство пользователя (раздел про MCP-сервер)
 
 ---
 

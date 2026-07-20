@@ -1,7 +1,7 @@
 {
   "name": "iikona-mcp-proxy",
   "version": "0.1.0",
-  "description": "stdio MCP proxy → HTTP /iikona-mcp/rpc for connecting AI clients (Claude Desktop, Cursor, 1c-refgen) to runtime-MCP service in core ИИкона",
+  "description": "stdio MCP proxy → HTTP /iikona-mcp/rpc for connecting AI clients (Claude Desktop, Cursor) to runtime-MCP service in core ИИкона",
   "type": "module",
   "main": "src/index.js",
   "bin": {
@@ -21,7 +21,7 @@
   "author": "Андриянов Роман (androman.pro)",
   "repository": {
     "type": "git",
-    "url": "http://nas.local:3000/androman/iikona-mcp-proxy"
+    "url": "https://github.com/andromanpro/1c-ai-connector-mcp-proxy.git"
   },
   "keywords": [
     "mcp",
