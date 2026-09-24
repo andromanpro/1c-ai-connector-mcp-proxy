@@ -53,7 +53,7 @@ npx iikona-mcp-proxy
 }
 ```
 
-После рестарта Claude Desktop в чате будут доступны 5 tools: `ping`, `get_configuration_info`, `get_metadata_tree`, `get_object_structure`, `execute_query`.
+После рестарта Claude Desktop в чате будут доступны 6 tools (ИИкона 1.6.1): `ping`, `get_configuration_info`, `get_metadata_tree`, `get_object_structure`, `execute_query`, `generate_diagram` (рендер готового кода диаграммы через Kroki в SVG или PNG). Список инструментов посредник пересылает из `tools/list` сервиса 1С: что опубликовано в вашей версии ИИконы, то клиент и увидит.
 
 ## Отладка
 
@@ -78,7 +78,7 @@ Claude Desktop / Cursor / другие MCP-клиенты
     ↕ HTTP + Basic auth
 1С HTTPService /iikona-mcp/rpc (КИИ_СерверMCP)
     ↕ in-process
-container-pattern dispatcher → 5 MCP-tools
+container-pattern dispatcher → 6 MCP-tools
 ```
 
 ## Лицензия
